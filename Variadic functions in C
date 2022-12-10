@@ -6,31 +6,7 @@
 #define MIN_ELEMENT 1
 #define MAX_ELEMENT 1000000
 #include <stdio.h>
-//#include <vrg.h>
 
-/*
-#ifndef VARIADIC
-
-#define _NARG3(_0, _1, _2, _3, ...) _3
-#define NUMARG3(...) _NARG3(__VA_ARGS__, 3, 2, 1, 0)
-
-#define _NARG5(_0, _1, _2, _3, _4, _5, ...) _5
-#define NUMARG5(...) _NARG5(__VA_ARGS__, 5, 4, 3, 2, 1, 0)
-
-#define _NARG10(_0, _1, _2, _3, _4, _5, _6, _7, _8, _9,_10, ...) _10
-#define NUMARG10(...) _NARG10(__VA_ARGS__, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0)
-
-#define __VARIADIC(name, num_args, ...) name ## _ ## num_args (__VA_ARGS__)
-#define _VARIADIC(name, num_args, ...) name (__VARIADIC(name, num_args, __VA_ARGS__))
-#define VARIADIC(name, num_args, ...) _VARIADIC(name, num_args, __VA_ARGS__)
-#define VARIADIC2(name, num_args, ...) __VARIADIC(name, num_args, __VA_ARGS__)
-
-// Vary function name by number of arguments supplied
-#define VARIADIC_NAME(name, num_args) name ## _ ## num_args ## _name ()
-#define NVARIADIC(name, num_args, ...) _VARIADIC(VARIADIC_NAME(name, num_args), num_args, __VA_ARGS__)
-
-#endif
-*/
 
 #define my_func10(...) sum1(__VA_ARGS__, 0)
 #define my_func9(...) my_func10(__VA_ARGS__, 0)
@@ -69,15 +45,7 @@
 #define maxx1(...) maxx2(__VA_ARGS__, 0)
 #define max(...) VAR_FUNC(__VA_ARGS__, max1, maxx10, maxx9, maxx8, maxx7, maxx6, maxx5, maxx4, maxx3, maxx2, maxx1)(__VA_ARGS__)
 
-/*
-#define sum(...)   vrg(sum_, __VA_ARGS__)
-#define sum1(count,a,b,c) sum(count,a,b,c,0,0,0,0,0,0,0)
-#define sum2(count,a,b,c,d,e) sum(count,a,b,c,d,e,0,0,0,0,0)
-#define min1(count,a,b,c) min(count,a,b,c,0,0,0,0,0,0,0)
-#define min2(count,a,b,c,d,e) min(count,a,b,c,d,e,0,0,0,0,0)
-#define max1(count,a,b,c) max(count,a,b,c,0,0,0,0,0,0,0)
-#define max2(count,a,b,c,d,e) max(count,a,b,c,d,e,0,0,0,0,0)
-*/
+
 int  sum1 (int count,int a,int b,int c,int d,int e, int f, int g, int h,int i, int j) {
     int arr[10]={a,b,c,d,e,f,g,h,i,j};
     int sum=0;
